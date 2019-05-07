@@ -1,6 +1,6 @@
-pivnet-api-token: 34042306c1994e589930a08871e17ee3
+pivnet-api-token: ((pivnet-api-token))
 pivnet-file-glob: "*pivotal"
 pivnet-product-slug: "pivotal-container-service"
-product-version: "1.4.0"
+product-version-regex: 1\.4\.(.*)
 download-stemcell: true
 stemcell-iaas: "google"
