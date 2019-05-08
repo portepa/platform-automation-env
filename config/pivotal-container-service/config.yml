@@ -13,8 +13,8 @@ network-properties:
 product-properties:
   .pivotal-container-service.pks_tls:
     value:
-      cert_pem: ((domain_crt))
-      private_key_pem: ((domain_key))
+      cert_pem: ((domain-crt))
+      private_key_pem: ((domain-key))
   .properties.pks_api_hostname:
     value: api.pks.pap.kewstom.com
   .properties.plan1_selector.active.master_az_placement:
