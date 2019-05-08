@@ -1,0 +1,57 @@
+product-name: pivotal-container-service
+network-properties:
+  singleton_availability_zone:
+    name: europe-west1-b
+  other_availability_zones:
+  - name: europe-west1-b
+  - name: europe-west1-c
+  - name: europe-west1-d
+  network:
+    name: pks # networks defined in the directory.yml and not in GCP or w/e platform
+  service_network:
+    name: pks-services # networks defined in the directory.yml and not in GCP or w/e platform
+product-properties:
+  .pivotal-container-service.pks_tls:
+    value:
+      cert_pem: ((domain_crt))
+      private_key_pem: ((domain_key))
+  .properties.pks_api_hostname:
+    value: api.pks.pap.kewstom.com
+  .properties.plan1_selector.active.master_az_placement:
+    value:
+    - europe-west1-b
+    - europe-west1-c
+    - europe-west1-d
+  .properties.plan1_selector.active.worker_az_placement:
+    value:
+    - europe-west1-b
+    - europe-west1-c
+    - europe-west1-d
+  .properties.plan1_selector.active.worker_instances:
+    value: 1
+  .properties.plan2_selector:
+    value: Plan Inactive
+  .properties.plan3_selector:
+    value: Plan Inactive
+  .properties.cloud_provider:
+    value: GCP
+  .properties.cloud_provider.gcp.project_id:
+    value: pa-pporte
+  .properties.cloud_provider.gcp.network:
+    value: pap-pcf-network
+  .properties.cloud_provider.gcp.master_service_account:
+    value: pap-pks-master@pa-pporte.iam.gserviceaccount.com
+  .properties.cloud_provider.gcp.worker_service_account:
+    value: pap-pks-worker@pa-pporte.iam.gserviceaccount.com
+  .properties.vm_extensions:
+    value:
+    - public_ip
+  .properties.telemetry_selector:
+    value: disabled
+errand-config:
+  upgrade-all-service-instances:
+    post-deploy-state: false
+resource-config:
+  pivotal-container-service:
+    elb_names:
+    - tcp:pap-pks-api
