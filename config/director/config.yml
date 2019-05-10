@@ -37,7 +37,7 @@ properties-configuration:
     networks:
     - name: management-network
       subnets:
-      - iaas_identifier: pap-pcf-network
+      - iaas_identifier: pap-pcf-network/pap-infrastructure-subnet/europe-west1
         cidr: 10.0.0.0/26
         reserved_ip_ranges: 10.0.0.0-10.0.0.9
         gateway: 10.0.0.1
@@ -48,7 +48,7 @@ properties-configuration:
         - europe-west1-d
     - name: pks-network
       subnets:
-      - iaas_identifier: pap-pks-network
+      - iaas_identifier: pap-pcf-network/pap-pks-subnet/europe-west1
         cidr: 10.0.10.0/24
         reserved_ip_ranges: 10.0.10.0-10.0.10.9
         gateway: 10.0.10.1
@@ -59,7 +59,7 @@ properties-configuration:
         - europe-west1-d
     - name: pks-services-network
       subnets:
-      - iaas_identifier: pap-pks-services-network
+      - iaas_identifier: pap-pcf-network/pap-pks-services-subnet/europe-west1
         cidr: 10.0.11.0/24
         reserved_ip_ranges: 10.0.11.0-10.0.11.9
         gateway: 10.0.11.1
