@@ -5,8 +5,8 @@ opsman-configuration:
     project: ((gcp-project-id))
     region: europe-west1
     zone: europe-west1-c
-    vm_name: ops-manager-vm
-    vpc_subnet: ((subdomain-name))-infrastructure-subnet
+    vm_name: opsmanager-vm
+    vpc_subnet: admin-infrastructure
     tags: ((subdomain-name))-ops-manager-external
     custom_cpu: 2
     custom_memory: 8

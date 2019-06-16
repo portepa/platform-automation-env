@@ -13,33 +13,33 @@ networks-configuration:
   networks:
   - name: infrastructure
     subnets:
-    - iaas_identifier: ((subdomain-name))-pcf-network/((subdomain-name))-infrastructure-subnet/europe-west1
-      cidr: 10.0.0.0/26
+    - iaas_identifier: vpc-pas-2-0-admin/admin-infrastructure/europe-west1
+      cidr: 10.1.0.0/26
       dns: 169.254.169.254
-      gateway: 10.0.0.1
-      reserved_ip_ranges: 10.0.0.1-10.0.0.9
+      gateway: 10.1.0.1
+      reserved_ip_ranges: 10.1.0.1-10.1.0.5
       availability_zone_names:
       - europe-west1-b
       - europe-west1-c
       - europe-west1-d
   - name: pks
     subnets:
-    - iaas_identifier: ((subdomain-name))-pcf-network/((subdomain-name))-pks-subnet/europe-west1
-      cidr: 10.0.10.0/24
+    - iaas_identifier: vpc-pas-2-0-admin/pks/europe-west1
+      cidr: 10.2.0.0/24
       dns: 169.254.169.254
-      gateway: 10.0.10.1
-      reserved_ip_ranges: 10.0.10.1-10.0.10.9
+      gateway: 10.2.0.1
+      reserved_ip_ranges: 10.2.0.1-10.2.0.5
       availability_zone_names:
       - europe-west1-b
       - europe-west1-c
       - europe-west1-d
   - name: pks-services
     subnets:
-    - iaas_identifier: ((subdomain-name))-pcf-network/((subdomain-name))-pks-services-subnet/europe-west1
-      cidr: 10.0.11.0/24
+    - iaas_identifier: vpc-pas-2-0-admin/pks-services/europe-west1
+      cidr: 10.3.0.0/24
       dns: 169.254.169.254
-      gateway: 10.0.11.1
-      reserved_ip_ranges: 10.0.11.1-10.0.11.9
+      gateway: 10.3.0.1
+      reserved_ip_ranges: 10.3.0.1-10.3.0.5
       availability_zone_names:
       - europe-west1-b
       - europe-west1-c
