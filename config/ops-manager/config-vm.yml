@@ -7,7 +7,7 @@ opsman-configuration:
     zone: europe-west1-b
     vm_name: opsmanager-vm
     vpc_subnet: admin-infrastructure
-    tags: ops-manager-external
+    tags: pas-vms
     custom_cpu: 2
     custom_memory: 8
     boot_disk_size: 200
