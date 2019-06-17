@@ -4,7 +4,7 @@ opsman-configuration:
     gcp_service_account: ((gcp-credentials))
     project: ((gcp-project-id))
     region: europe-west1
-    zone: europe-west1-c
+    zone: europe-west1-b
     vm_name: opsmanager-vm
     vpc_subnet: admin-infrastructure
     tags: ops-manager-external
@@ -12,4 +12,4 @@ opsman-configuration:
     custom_memory: 8
     boot_disk_size: 200
     public_ip: ((opsman-public-ip))
-    private_ip: 10.0.0.2
+    private_ip: 10.1.0.3
