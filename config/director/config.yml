@@ -52,7 +52,7 @@ properties-configuration:
     retry_bosh_deploys: true
   iaas_configuration:
     project: ((gcp-project-id))
-    default_deployment_tag: ((subdomain-name))
+    default_deployment_tag: pks
     auth_json: ((gcp-credentials))
 resource-configuration:
   compilation:
