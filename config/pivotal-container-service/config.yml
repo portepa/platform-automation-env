@@ -50,7 +50,7 @@ product-properties:
     value: disabled
 errand-config:
   upgrade-all-service-instances:
-    post-deploy-state: false
+    post-deploy-state: true
 resource-config:
   pivotal-container-service:
     elb_names:
