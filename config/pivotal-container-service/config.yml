@@ -16,7 +16,7 @@ product-properties:
       cert_pem: ((domain-crt))
       private_key_pem: ((domain-key))
   .properties.pks_api_hostname:
-    value: api.pks.pap.kewstom.com
+    value: api.pks.pivotalparis.gcp.pintaux.me
   .properties.plan1_selector.active.master_az_placement:
     value:
     - europe-west1-b
@@ -36,13 +36,13 @@ product-properties:
   .properties.cloud_provider:
     value: GCP
   .properties.cloud_provider.gcp.project_id:
-    value: pa-pporte
+    value: ((gcp-project-id))
   .properties.cloud_provider.gcp.network:
-    value: pap-pcf-network
+    value: pivotalparis-pcf-network
   .properties.cloud_provider.gcp.master_service_account:
-    value: pap-pks-master@pa-pporte.iam.gserviceaccount.com
+    value: pivotalparis-pks-master@pa-npintaux.iam.gserviceaccount.com
   .properties.cloud_provider.gcp.worker_service_account:
-    value: pap-pks-worker@pa-pporte.iam.gserviceaccount.com
+    value: pivotalparis-pks-worker@pa-npintaux.iam.gserviceaccount.com
   .properties.vm_extensions:
     value:
     - public_ip
@@ -54,4 +54,4 @@ errand-config:
 resource-config:
   pivotal-container-service:
     elb_names:
-    - tcp:pap-pks-api
+    - tcp:pivotalparis-pks-api
